@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+</head>
+
+<style type="text/css">
+	.navbar-inverse .navbar-nav>li>a {
+    color: #f10000;
+    font-family: initial;
+    font-size: x-large;
+}
+body{
+    background-image:url(pic3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid #0023ff;
+}
+</style>
+
+
+<body>
+
+	<br/><br/>
+
+	<form action="add.php" method="post" name="form1">
+		<table width="25%" border="0"  class="table table-bordered">
+			<tr> 
+				<td>Player ID</td>
+				<td><input type="text" name="studentid"></td>
+			</tr>
+			<tr> 
+				<td>Username</td>
+				<td><input type="text" name="fname"></td>
+			</tr>
+			<tr> 
+				<td>Email</td>
+				<td><input type="text" name="lname"></td>
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<td><input type="text" name="gender"></td>
+			</tr>
+			<tr> 
+				<td>Birth Date</td>
+				<td><input type="text" name="birthdate"></td>
+			</tr>
+			<tr> 
+				<td>Address</td>
+				<td><input type="text" name="address"></td>
+			</tr>
+			<tr> 
+				<td>Contact</td>
+				<td><input type="text" name="contact"></td>
+			</tr>
+			<tr> 
+				<td></td>
+				<td><input type="submit" name="Submit" value="Join" class="btn btn-danger"></a></td>
+            </tr>
+            <td><button><a href="index.php">GO BACK</a></button></td>
+		</table>
+	</form>
+	
+</body>
+</html>
+

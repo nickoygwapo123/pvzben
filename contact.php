@@ -1,0 +1,97 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: login.php");
+  }
+?>
+
+<!DOCTYPE html>
+  <html>
+    <head>
+	    <title>Home</title>
+	    <link rel="stylesheet" type="text/css" href="css/index.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+        body{
+          background-image:url(contact.jpg);
+        }
+        .topnav {
+    overflow: hidden;
+    background-color: #abababa1;
+    height: 50px;
+}
+
+.source{
+  height:200px;
+  width:200px;
+}
+      </style>
+    </head>
+    <body>
+    
+        </div>
+        <div class="topnav" id="myTopnav">
+          <a href="index.php" >Home</a>
+          <div class="dropdown">
+          <button class="dropbtn">Database 
+            <i class="fa fa-caret-down"></i>
+          </button>
+            <div class="dropdown-content">
+              <a href="add.html">Join as Player</a>
+              <a href="add2.html">Join as Plant</a>
+              <a href="#"></a>
+            </div>
+        </div>  <a href="index3.php">View Player</a>
+        <a href="index4.php">View Plant Player</a>
+          <a href="contact.php">Contact</a>
+         
+        <li style="float:right"><?php  if (isset($_SESSION['username'])) : ?><a class="active" href="index.php?logout='1'">Logout</a><?php endif ?>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+
+        <div class="content">
+        <!-- notification message -->
+        <?php if (isset($_SESSION['success'])) : ?>
+          <div class="error success" >
+            <h3>
+              <?php 
+                echo $_SESSION['success']; 
+                unset($_SESSION['success']);
+              ?>
+            </h3>
+          </div>
+        <?php endif ?>
+    	
+
+        <script>
+          function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+              x.className += " responsive";
+            } else {
+              x.className = "topnav";
+            }
+          }
+      </script>
+      <div class="container">
+      <h1>CONCTACT US ON @PlantVsZombie.com.ph</h1>
+      <video width="800" height="800" autoplay>
+  <source src="plants.mp4" type="video/mp4">
+  
+
+</video>
+        </div>
+
+
+    
+
+		
+</body>
+</html>
